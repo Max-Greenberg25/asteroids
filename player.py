@@ -31,7 +31,7 @@ class Player(CircleShape):
         if self.reload <= 0:
             shot = Shot(self.triangle()[0][0], self.triangle()[0][1])
             shot.velocity = pygame.Vector2(0, 1).rotate(self.rotation) * PLAYER_SHOOT_SPEED
-            self.reload += 0.3
+            self.reload += PLAYER_RELOAD_TIME
 
     def update(self, dt):
         keys = pygame.key.get_pressed()
